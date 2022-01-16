@@ -1,10 +1,10 @@
 <?php
 class Database
 {
-    private $host = '';
-    private $db_name = '';
-    private $user = '';
-    private $pass = '';
+    private $host = 'localhost';
+    private $db_name = 'scandiweb_junior_task';
+    private $user = 'viodid';
+    private $pass = 'ay$^YMsZJS8@';
     private $conn;
 
     // DB Connect
@@ -30,4 +30,4 @@ class Database
 
 $test = new Database;
 
-// echo $test->connect() . '<br>';
+echo $test->connect() . '<br>';
