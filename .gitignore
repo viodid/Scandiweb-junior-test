@@ -1,4 +1,4 @@
 .DS_Store
-var.php
 *.css
 *.map
+/.sass-cache

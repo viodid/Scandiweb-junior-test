@@ -16,18 +16,15 @@ class Database
                 $this->user,
                 $this->pass
             );
-            foreach ($this->conn->query('SELECT * from products') as $row) {
-                print_r($row);
-            }
+            // foreach ($this->conn->query('SELECT * from products') as $row) {
+            //     print_r($row);
+            // }
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-            $this->conn = null;
         } catch (PDOException $e) {
             print "Error!: " . $e->getMessage() . "<br/>";
         }
+
+        return $this->conn;
     }
 }
-
-$test = new Database;
-
-echo $test->connect() . '<br>';
