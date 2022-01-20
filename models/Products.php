@@ -1,4 +1,10 @@
 <?php
+
+
+
+// REMEMBER ABSTRACT THE CLASS
+
+
 class Products
 {
     // DB stuff
@@ -10,21 +16,19 @@ class Products
     protected $name;
     protected $price;
     // Constructor with DB
-    public function __construct($db, $id, $sku, $name, $price)
+    public function __construct($db)
     {
         $this->conn = $db;
-        $this->id = $id;
-        $this->sku = $sku;
-        $this->name = $name;
-        $this->price = $price;
     }
 
     public function read()
     {
-        $query = 'SELECT * FROM products';
+        $query = 'SELECT * FROM ' . $this->table;
 
+        // Prepare statement
         $stmt = $this->conn->prepare($query);
 
+        // Execute query
         $stmt->execute();
 
         return $stmt;
@@ -37,9 +41,9 @@ class Furniture extends Products
     protected $width;
     protected $length;
 
-    public function __construct($db, $id, $sku, $name, $price, $height, $width, $length)
+    public function __construct($db, $height, $width, $length)
     {
-        parent::__construct($db, $id, $sku, $name, $price);
+        parent::__construct($db);
         $this->height = $height;
         $this->width = $width;
         $this->length = $length;
@@ -50,9 +54,9 @@ class DVD extends Products
 {
     protected $size;
 
-    public function __construct($db, $id, $sku, $name, $price, $size)
+    public function __construct($db, $size)
     {
-        parent::__construct($db, $id, $sku, $name, $price);
+        parent::__construct($db);
         $this->size = $size;
     }
 }
@@ -61,9 +65,9 @@ class Book extends Products
 {
     protected $weight;
 
-    public function __construct($db, $id, $sku, $name, $price, $weight)
+    public function __construct($db, $weight)
     {
-        parent::__construct($db, $id, $sku, $name, $weight);
+        parent::__construct($db, $weight);
         $this->weight = $weight;
     }
 }

@@ -1,18 +1,21 @@
 <?php
+
+include_once '/etc/scandiweb-junior-developer-test-task/config.php';
+
 class Database
 {
-    private $host = 'localhost';
-    private $db_name = 'scandiweb_junior_task';
-    private $user = 'viodid';
-    private $pass = 'ay$^YMsZJS8@';
+    private $host = HOST;
+    private $db_name = DB_NAME;
+    private $user = USER;
+    private $pass = PASS;
     private $conn;
 
     // DB Connect
     public function connect()
     {
         try {
-            $this->conn = new PDO(
-                'mysql:host=' . $this->host . ';dbname=' . $this->db_name,
+            $this->conn = new \PDO(
+                "mysql:host=$this->host;dbname=$this->db_name",
                 $this->user,
                 $this->pass
             );
