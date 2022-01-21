@@ -40,21 +40,24 @@ function removeChildNodes(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
-
+// Recursive function 
 function createLabelInputNodes(labels, ids, type, parent) {
-    while (labels.length > 0) {
+    while (labels.length > 0) { //Base case
         var nodeLabel = document.createElement('label');
         var nodeInput = document.createElement('input');
         var textnode = document.createTextNode(labels[labels.length - 1]);
         nodeInput.id = ids[ids.length - 1];
+        nodeInput.name = ids[ids.length - 1];
         nodeInput.type = type;
-        // Append nodes to the document
+        nodeInput.required = 'yes';
+        // Appending nodes to the document
         nodeLabel.appendChild(textnode);
         parent.appendChild(nodeLabel);
         parent.appendChild(nodeInput);
-        // Remove used label and id
+        // Removing used label and id from the array params
         labels.pop();
         ids.pop();
+        // Calling the function again with the remaining data
         createLabelInputNodes(labels, ids, type, parent);
     }
 }

@@ -19,8 +19,6 @@ $num = $result->rowCount();
 
 
 if ($num > 0) {
-    $products_arr = array();
-
     while ($row = $result->fetch()) {
         var_dump($row) . '<br>';
 

@@ -26,6 +26,7 @@ class Database
             $this->conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         } catch (PDOException $e) {
             print "Error!: " . $e->getMessage() . "<br/>";
+            die();
         }
 
         return $this->conn;

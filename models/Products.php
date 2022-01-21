@@ -21,6 +21,11 @@ class Products
         $this->conn = $db;
     }
 
+
+    // make read function static 
+
+
+
     public function read()
     {
         $query = 'SELECT * FROM ' . $this->table;

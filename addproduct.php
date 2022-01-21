@@ -16,7 +16,7 @@
         <div class="container">
             <h1>Product Add</h1>
             <div class="btn-cnt">
-                <button type="submit" form="product_form">Save</button>
+                <button type="submit" form="product_form" name="submit">Save</button>
                 <button type="button" onclick="location.href='/'">Cancel</button>
             </div>
         </div>
