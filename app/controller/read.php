@@ -13,7 +13,7 @@ $db = $database->connect();
 $products = new Products($db);
 
 // Execute read query
-$result = $products->read();
+$result = $products->readAllProducts();
 // Get row count
 $num = $result->rowCount();
 

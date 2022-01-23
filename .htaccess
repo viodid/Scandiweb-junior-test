@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^$ public/
+RewriteRule ^addproduct$ public/addproduct.php [NC]
+
+

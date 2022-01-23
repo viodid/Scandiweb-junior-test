@@ -26,9 +26,9 @@ class Products
 
 
 
-    public function read()
+    public function readAllProducts()
     {
-        $query = 'SELECT * FROM ' . $this->table;
+        $query = 'SELECT * FROM ' . $this->table . ' ORDER BY id ASC';
 
         // Prepare statement
         $stmt = $this->conn->prepare($query);

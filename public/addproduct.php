@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- JS and Stylesheet -->
-    <script type="text/javascript" src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="static/styles/main.css" />
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <title>Product Add</title>
 </head>
 
@@ -23,7 +23,7 @@
     </header>
     <hr>
     <main>
-        <form action="api/products/create.php" method="post" id="product_form">
+        <form action="../api/products/create.php" method="post" id="product_form">
             <div class="label-input">
                 <label for="sku">SKU</label>
                 <input type="text" id="sku" name="sku" required>

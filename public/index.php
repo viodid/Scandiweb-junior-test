@@ -10,6 +10,7 @@
 
 <body>
     <h1>Product Page</h1>
+    <a href="/addproduct">Link</a>
 </body>
 
 </html>
