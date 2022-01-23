@@ -14,21 +14,18 @@ function extendForm(option) {
         case 'dvd':
             createLabelInputNodes(['Size (MB)'],
                 ['size'],
-                'number',
                 dynamicForm);
             createProductDescription('size in (MB)', dynamicForm);
             break
         case 'furniture':
             createLabelInputNodes(['Length (CM)', 'Width (CM)', 'Height (CM)'],
                 ['length', 'width', 'height'],
-                'number',
                 dynamicForm);
             createProductDescription('dimensions in (HxWxL)', dynamicForm);
             break
         case 'book':
             createLabelInputNodes(['Weight (KG)'],
                 ['weight'],
-                'number',
                 dynamicForm);
             createProductDescription('weight in (Kg)', dynamicForm);
             break
@@ -41,14 +38,14 @@ function removeChildNodes(parent) {
     }
 }
 // Recursive function 
-function createLabelInputNodes(labels, ids, type, parent) {
+function createLabelInputNodes(labels, ids, parent) {
     while (labels.length > 0) { //Base case
         var nodeLabel = document.createElement('label');
         var nodeInput = document.createElement('input');
         var textnode = document.createTextNode(labels[labels.length - 1]);
         nodeInput.id = ids[ids.length - 1];
         nodeInput.name = ids[ids.length - 1];
-        nodeInput.type = type;
+        nodeInput.step = 'any';
         nodeInput.required = 'yes';
         // Appending nodes to the document
         nodeLabel.appendChild(textnode);
@@ -58,7 +55,7 @@ function createLabelInputNodes(labels, ids, type, parent) {
         labels.pop();
         ids.pop();
         // Calling the function again with the remaining data
-        createLabelInputNodes(labels, ids, type, parent);
+        createLabelInputNodes(labels, ids, parent);
     }
 }
 

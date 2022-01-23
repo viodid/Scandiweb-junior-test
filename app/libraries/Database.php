@@ -1,6 +1,6 @@
 <?php
 
-include_once '/etc/scandiweb-junior-developer-test-task/config.php';
+require_once '/etc/scandiweb-junior-developer-test-task/config.php';
 
 class Database
 {
@@ -32,3 +32,6 @@ class Database
         return $this->conn;
     }
 }
+
+// $test = new Database();
+// $test->connect();

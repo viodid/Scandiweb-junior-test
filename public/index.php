@@ -11,6 +11,13 @@
 <body>
     <h1>Product Page</h1>
     <a href="/addproduct">Link</a>
+    <?php
+    include_once '../app/require.php';
+    echo '<br>';
+    print_r($result->fetch()->name);
+    echo '<br>';
+    echo $num;
+    ?>
 </body>
 
 </html>

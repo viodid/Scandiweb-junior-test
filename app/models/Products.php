@@ -1,7 +1,5 @@
 <?php
 
-
-
 // REMEMBER ABSTRACT THE CLASS
 
 
@@ -20,11 +18,6 @@ class Products
     {
         $this->conn = $db;
     }
-
-
-    // make read function static 
-
-
 
     public function readAllProducts()
     {
