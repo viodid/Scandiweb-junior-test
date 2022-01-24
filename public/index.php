@@ -14,9 +14,9 @@
     <?php
     include_once '../app/require.php';
     echo '<br>';
-    print_r($result->fetch()->name);
+    // print_r($result->fetch()->name);
     echo '<br>';
-    echo $num;
+    // echo $num;
     ?>
 </body>
 

@@ -11,19 +11,19 @@ function extendForm(option) {
     // Remove child nodes in case the type switcher changes
     removeChildNodes(dynamicForm);
     switch (option) {
-        case 'dvd':
+        case 'DVD':
             createLabelInputNodes(['Size (MB)'],
                 ['size'],
                 dynamicForm);
             createProductDescription('size in (MB)', dynamicForm);
             break
-        case 'furniture':
+        case 'Furniture':
             createLabelInputNodes(['Length (CM)', 'Width (CM)', 'Height (CM)'],
                 ['length', 'width', 'height'],
                 dynamicForm);
             createProductDescription('dimensions in (HxWxL)', dynamicForm);
             break
-        case 'book':
+        case 'Book':
             createLabelInputNodes(['Weight (KG)'],
                 ['weight'],
                 dynamicForm);

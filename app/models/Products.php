@@ -1,22 +1,21 @@
 <?php
 
-// REMEMBER ABSTRACT THE CLASS
-
-
-class Products
+abstract class Products
 {
     // DB stuff
     private $conn;
     private $table = 'products';
-    // products Properties
-    protected $id;
+    // products general properties
     protected $sku;
     protected $name;
     protected $price;
-    // Constructor with DB
-    public function __construct($db)
+
+    protected function __construct($db, $sku, $name, $price)
     {
         $this->conn = $db;
+        $this->sku = $sku;
+        $this->name = $name;
+        $this->price = $price;
     }
 
     public function readAllProducts()
@@ -39,12 +38,16 @@ class Furniture extends Products
     protected $width;
     protected $length;
 
-    public function __construct($db, $height, $width, $length)
+    public function __construct($db, $sku, $name, $price, ...$properties)
     {
-        parent::__construct($db);
-        $this->height = $height;
-        $this->width = $width;
-        $this->length = $length;
+        parent::__construct($db, $sku, $name, $price);
+        $this->height = $properties[2];
+        $this->width = $properties[1];
+        $this->length = $properties[0];
+
+        foreach ($this as $key => $value) {
+            print "$key => $value\n" . '<br>';
+        }
     }
 }
 
@@ -52,10 +55,14 @@ class DVD extends Products
 {
     protected $size;
 
-    public function __construct($db, $size)
+    public function __construct($db, $sku, $name, $price, ...$properties)
     {
-        parent::__construct($db);
-        $this->size = $size;
+        parent::__construct($db, $sku, $name, $price);
+        $this->size = $properties[0];
+
+        foreach ($this as $key => $value) {
+            print "$key => $value\n" . '<br>';
+        }
     }
 }
 
@@ -63,9 +70,13 @@ class Book extends Products
 {
     protected $weight;
 
-    public function __construct($db, $weight)
+    public function __construct($db, $sku, $name, $price, ...$properties)
     {
-        parent::__construct($db, $weight);
-        $this->weight = $weight;
+        parent::__construct($db, $sku, $name, $price);
+        $this->weight = $properties[0];
+
+        foreach ($this as $key => $value) {
+            print "$key => $value\n" . '<br>';
+        }
     }
 }

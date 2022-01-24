@@ -23,7 +23,7 @@
     </header>
     <hr>
     <main>
-        <form action="../app/controller/create.php" method="post" id="product_form">
+        <form action="../app/controllers/create.php" method="post" id="product_form">
             <div class="label-input">
                 <label for="sku">SKU</label>
                 <input type="text" id="sku" name="sku" required>
@@ -45,9 +45,7 @@
                     <option value="Book" id="Book">Book</option>
                 </select>
             </div>
-            <div class="label-input" id="dynamic-form">
-
-            </div>
+            <div class="label-input" id="dynamic-form"></div>
         </form>
     </main>
     <hr>

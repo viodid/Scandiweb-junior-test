@@ -1,2 +1,0 @@
-<?php
-//Core App Class
