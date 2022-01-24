@@ -47,8 +47,10 @@ function createLabelInputNodes(labels, ids, parent) {
         nodeInput.name = ids[ids.length - 1];
         nodeInput.step = 'any';
         nodeInput.required = 'yes';
+        nodeInput.classList.add('show');
         // Appending nodes to the document
         nodeLabel.appendChild(textnode);
+        nodeLabel.classList.add('show');
         parent.appendChild(nodeLabel);
         parent.appendChild(nodeInput);
         // Removing used label and id from the array params

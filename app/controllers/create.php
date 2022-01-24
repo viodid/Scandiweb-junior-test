@@ -1,6 +1,6 @@
 <?php
 
-require_once '/var/www/html/scandiweb-junior-developer-test-task/app/config/Database.php';
+require_once '/var/www/html/scandiweb-junior-developer-test-task/app/database/Database.php';
 require_once '/var/www/html/scandiweb-junior-developer-test-task/app/models/Products.php';
 
 
