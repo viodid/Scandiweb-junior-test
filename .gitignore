@@ -2,4 +2,4 @@
 *.css
 *.map
 .sass-cache/
-css/
+public/css/

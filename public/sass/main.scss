@@ -1,8 +1,6 @@
-$font-stack: Arial, Helvetica, sans-serif;
-$light-color: #f4f4f4;
-$primary-color: #0e6cff;
-$secondary-color: #ff8700;
+@import 'config';
 @import 'buttons';
+
 
 
 * {
@@ -11,10 +9,71 @@ $secondary-color: #ff8700;
     padding: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
     background-color: $light-color;
-    font: $font-stack;
+    font-family: $font-stack;
     line-height: 1.6;
+    margin: 0 30px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+  margin: $margin-1;
+  padding-top: 20px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+}
+
+main {
+  height: fit-content;
+  flex-grow: 2;
+
+  form {
+    margin: $margin-1;
+
+    .label-input {
+      display: flex;
+      margin: $margin-2;
+
+      label {
+        min-width: 120px;
+      }
+
+      input, select {
+        @extend %border;
+        min-width: 143px;
+      }
+    }
+
+    #dinamic-form {
+      
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  
+  p {
+    margin: $margin-2;
+  }
+}
+
+
+hr {
+  @extend %border;
 }
 
 

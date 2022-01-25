@@ -16,8 +16,8 @@
         <div class="container">
             <h1>Product Add</h1>
             <div class="btn-cnt">
-                <button type="submit" form="product_form">Save</button>
-                <button type="button" onclick="location.href='/'">Cancel</button>
+                <button type="submit" form="product_form" class="btn-primary">Save</button>
+                <button type="button" onclick="location.href='/'" class="btn-secondary">Cancel</button>
             </div>
         </div>
     </header>
@@ -36,7 +36,7 @@
                 <label for="price">Price ($)</label>
                 <input type="number" id="price" name="price" step="any" required>
             </div>
-            <div class="label-select">
+            <div class="label-input">
                 <label for="productType">Type Switcher</label>
                 <select name="productType" id="productType" required>
                     <option selected disabled value="">Type Switcher</option>
