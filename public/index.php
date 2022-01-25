@@ -16,11 +16,12 @@
         <div class="container">
             <h1>Product Page</h1>
             <div class="btn-cnt">
-                <button type="button" onclick="location.href='/addproduct'">ADD</button>
-                <button type="submit" form="product_form">MASS DELETE</button>
+                <button type="button" onclick="location.href='/addproduct'" class="btn-primary">ADD</button>
+                <button type="submit" form="product_form" class="btn-secondary">MASS DELETE</button>
             </div>
         </div>
     </header>
+    <hr>
     <main>
         whatever
     </main>

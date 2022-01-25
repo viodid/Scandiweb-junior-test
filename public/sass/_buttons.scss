@@ -13,16 +13,9 @@
     }
 }
 
-.btn-primary {
+.btn {
     @extend %btn;
     @extend %border;
     background-color: $primary-color;
 
-}
-
-.btn-secondary {
-    @extend %btn;
-    @extend %border;
-    background-color: $secondary-color;
-    
 }
