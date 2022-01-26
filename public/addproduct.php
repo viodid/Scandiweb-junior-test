@@ -16,8 +16,8 @@
         <div class="container">
             <h1>Product Add</h1>
             <div class="btn-cnt">
-                <button type="submit" form="product_form" class="btn-primary">Save</button>
-                <button type="button" onclick="location.href='/'" class="btn-secondary">Cancel</button>
+                <button type="submit" form="product_form" class="btn primary">Save</button>
+                <button type="button" onclick="location.href='/'" class="btn secondary">Cancel</button>
             </div>
         </div>
     </header>

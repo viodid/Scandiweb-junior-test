@@ -32,6 +32,3 @@ class Database
         return $this->conn;
     }
 }
-
-// $test = new Database();
-// $test->connect();
