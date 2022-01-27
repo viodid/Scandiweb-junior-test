@@ -7,7 +7,7 @@ function listen() {
 }
 
 function extendForm(option) {
-    var dynamicForm = document.getElementById('dynamic-form');
+    var dynamicForm = document.getElementById('dynamic_form');
     // Remove child nodes in case the type switcher changes
     removeChildNodes(dynamicForm);
     switch (option) {

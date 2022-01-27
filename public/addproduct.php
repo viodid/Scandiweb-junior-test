@@ -45,7 +45,7 @@
                     <option value="Book" id="Book">Book</option>
                 </select>
             </div>
-            <div id="dynamic-form"></div>
+            <div id="dynamic_form"></div>
         </form>
     </main>
     <hr>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Stylesheet -->
     <link rel="stylesheet" type="text/css" href="public/css/main.css" />
+    <script type="text/javascript" src="public/js/index.js"></script>
     <title>Product Page</title>
 </head>
 
