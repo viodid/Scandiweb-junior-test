@@ -45,8 +45,8 @@ abstract class Products
 
     protected function insertProductTable()
     {
-        $query = 'INSERT INTO ' . $this->table .
-            ' SET
+        $query = 'INSERT INTO ' . $this->table . ' 
+            SET
             SKU = :sku,
             name = :name,
             price = :price
@@ -57,6 +57,17 @@ abstract class Products
         $stmt->execute();
 
         return $this->getLastID();
+    }
+
+    public static function deleteProduct($db, $id)
+    {
+        $query = 'DELETE FROM products 
+        WHERE id=:id;';
+
+        $stmt = $db->prepare($query);
+        $id = htmlspecialchars(strip_tags($id));
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
     }
 
 

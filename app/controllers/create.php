@@ -1,5 +1,4 @@
 <?php
-
 require_once '/var/www/html/scandiweb-junior-developer-test-task/app/database/Database.php';
 require_once '/var/www/html/scandiweb-junior-developer-test-task/app/models/Products.php';
 
@@ -28,8 +27,6 @@ $newProdruct = new $typeProduct(
 );
 
 $newProdruct->createProduct();
-
-
 
 // Redirect to front page
 header("Location: http://178.79.181.140:8888/");

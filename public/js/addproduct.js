@@ -46,6 +46,7 @@ function createLabelInputNodes(labels, ids, parent) {
         var textnode = document.createTextNode(labels[labels.length - 1]);
         nodeInput.id = ids[ids.length - 1];
         nodeInput.name = ids[ids.length - 1];
+        nodeInput.type = 'number';
         nodeInput.step = 'any';
         nodeInput.required = 'yes';
         nodeDiv.classList.add('label-input');
