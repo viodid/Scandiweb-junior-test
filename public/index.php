@@ -24,36 +24,35 @@
     <main>
         <form action="../app/controllers/delete.php" method="get" class="form-product" id="index_form">
             <?php include '../app/controllers/read.php';
-            // Check if any posts
-            if ($num > 0) {
-
-                while ($row = $result->fetch(PDO::FETCH_OBJ)) {
-                    // var_dump($row);
-            ?>
-
-                    <div class="product-container">
-                        <input type="checkbox" name="id1.test" class=".delete-checkbox">
-                        <div class="attributes">
-                            <?php
-                            var_dump($row);
-                            ?>
-                        </div>
-                    </div>
-
-            <?php
-
+            while ($row = $result->fetch()) :
+                $dummy->id = $row->id;
+                $dummy->sku = $row->SKU;
+                $dummy->name = $row->name;
+                $dummy->price = $row->price . '$';
+                if ($row->size) {
+                    $dummy->info = 'Size: ' . $row->size . 'MB';
+                } else if ($row->weight) {
+                    $dummy->info = 'Weight: ' . $row->weight . 'KG';
+                } else {
+                    $dummy->info = 'Dimension: ' . $row->height . 'x' . $row->width . 'x' . $row->length;
                 }
-            }
-
-
-
-
-
-            // $superResult = $result->fetch(PDO::FETCH_ASSOC);
-            // echo $superResult['SKU'];
-            // $second = $result->fetch(PDO::FETCH_ASSOC);
-            // echo $second['SKU'];
             ?>
+                <div class="product-container btn">
+                    <input type="checkbox" name=<?php echo $dummy->id; ?> class="delete-checkbox">
+                    <div class="attributes">
+                        <?php
+                        unset($dummy->id);
+                        foreach ($dummy as $key => $value) :
+                        ?>
+                            <p>
+                                <?php echo $value; ?>
+                            </p>
+
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+
+            <?php endwhile; ?>
         </form>
     </main>
     <hr>

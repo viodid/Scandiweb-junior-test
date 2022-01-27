@@ -55,12 +55,33 @@ main {
         min-width: 143px;
       }
     }
+  }
+}
 
-    #dinamic-form {
-      
+// Index form
+.form-product {
+  display: flex;
+  flex-wrap: wrap;
+
+  .product-container {
+    @extend %border;
+    min-width: 280px;
+    margin: 16px auto;
+    background-color: rgb(190, 128, 248);
+
+    .attributes {
+      margin-bottom: 50px;
+
+      p {
+        text-align: center;
+      }
+    }
+    .delete-checkbox {
+      margin: 16px;
     }
   }
 }
+
 
 footer {
   display: flex;
@@ -74,18 +95,4 @@ footer {
 
 hr {
   @extend %border;
-}
-
-
-@keyframes smooth {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
-
-.show {
-    animation: smooth 0.5s ease;
 }

@@ -4,12 +4,6 @@ require_once '/var/www/html/scandiweb-junior-developer-test-task/app/database/Da
 require_once '/var/www/html/scandiweb-junior-developer-test-task/app/models/Products.php';
 
 
-
-// echo var_dump($_POST);
-
-// Grabbing the POST data and running error handlers
-
-
 $database = new Database();
 $db = $database->connect();
 
@@ -33,7 +27,9 @@ $newProdruct = new $typeProduct(
     ...$propertiesArr
 );
 
+$newProdruct->createProduct();
+
 
 
 // Redirect to front page
-// header("Location: http://178.79.181.140:8888/");
+header("Location: http://178.79.181.140:8888/");
