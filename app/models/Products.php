@@ -37,7 +37,6 @@ abstract class Products
         ORDER BY p.id ASC;';
 
         $stmt = $db->prepare($query);
-
         $stmt->execute();
 
         return $stmt;

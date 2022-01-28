@@ -16,8 +16,8 @@
         <div class="container">
             <h1>Product Page</h1>
             <div class="btn-cnt">
-                <button type="button" onclick="location.href='/addproduct'" class="btn primary">ADD</button>
-                <button type="submit" form="index_form" id="delete-product-btn" class="btn secondary">MASS DELETE</button>
+                <button type="button" onclick="location.href='/addproduct'" class="btn">ADD</button>
+                <button type="submit" form="index_form" id="delete-product-btn" class="btn">MASS DELETE</button>
             </div>
         </div>
     </header>

@@ -1,21 +1,11 @@
 $font-stack: Arial, Helvetica, sans-serif;
 $light-color: #f4f4f4;
-$primary-color: #2ec4b6;
-$secondary-color: #b8ebe6;
 $shadow: #222;
 $margin-1: 20px 10px;
 $margin-2: 16px auto;
 %border {
     border: 2px solid $shadow;
     border-radius: 4px;
-}
-
-.primary {
-    background-color: $primary-color;
-}
-
-.secondary {
-    background-color: $secondary-color;
 }
 
 @keyframes smooth {
